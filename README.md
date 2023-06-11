@@ -1,4 +1,4 @@
-Шаблон для 2-гої роботи з архітектури ПЗ
+Software architecture lab 2
 ---
 
-Використайте кнопку **"Use this template"**, щоб створити власний репозиторій.
+This lab was made by Mikhailo Moliakov.
