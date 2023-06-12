@@ -37,6 +37,10 @@ func isOperator(token string) bool {
 }
 
 func PrefixToPostfix(input string) (string, error) {
+	if input == "" {
+		return "", fmt.Errorf("empty prefix expression")
+	}
+
 	stack := Stack{}
 	tokens := strings.Split(input, " ")
 
