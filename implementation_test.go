@@ -12,14 +12,14 @@ type PrefixToPostfixSuite struct{}
 var _ = Suite(&PrefixToPostfixSuite{})
 
 func (s *PrefixToPostfixSuite) TestPrefixToPostfix(c *C) {
-	simpleExpression := "+ 2 3"
-	expectedResultSimple := "2 3 +"
+	simpleExpression := "+ 1 2"
+	expectedResultSimple := "1 2 +"
 	resultSimple, err := lab2.PrefixToPostfix(simpleExpression)
 	c.Assert(err, IsNil)
 	c.Assert(resultSimple, Equals, expectedResultSimple)
 
-	complexExpression := "* - + 5 3 4 / 6 2"
-	expectedResultComplex := "5 3 + 4 - 6 2 / *"
+	complexExpression := "* - + 3 2 1 / 1 2"
+	expectedResultComplex := "3 2 + 1 - 1 2 / *"
 	resultComplex, err := lab2.PrefixToPostfix(complexExpression)
 	c.Assert(err, IsNil)
 	c.Assert(resultComplex, Equals, expectedResultComplex)
